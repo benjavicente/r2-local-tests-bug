@@ -4,10 +4,10 @@
 	"private": true,
 	"scripts": {
 		"deploy": "wrangler deploy",
-		"dev": "wrangler dev --env tests",
-		"start": "wrangler dev --env tests",
+		"dev": "wrangler dev",
+		"start": "wrangler dev",
 		"test": "vitest",
-		"cf-typegen": "wrangler types --env tests"
+		"cf-typegen": "wrangler types"
 	},
 	"devDependencies": {
 		"@cloudflare/vitest-pool-workers": "^0.5.2",

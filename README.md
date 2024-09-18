@@ -14,6 +14,6 @@ curl http://localhost:8787
 pnpm run test run
 ```
 
-- The file can be accessed locally in the environment, since 2 works.
-- The vitest tests environment has access to the local R2 server, demonstrated on the first test on 3.
+- The file can be accessed locally, since 2 works.
+- The vitest runner has access to the local R2 emulator, demonstrated on the first test on 3.
 - But in vitest, **the bucket appears to be empty**, failing the other tests.

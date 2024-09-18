@@ -3,7 +3,7 @@ import { describe, it, expect } from 'vitest';
 
 import worker from '../src/index';
 
-describe('Tests environment with local R2', () => {
+describe('Vitest with local R2', () => {
 	it('Is connected to local R2', async () => {
 		expect(env.testFiles).toBeDefined();
 		const response = await env.testFiles.list();
