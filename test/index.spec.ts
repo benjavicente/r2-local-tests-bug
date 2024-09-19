@@ -3,7 +3,7 @@ import { describe, it, expect } from 'vitest';
 
 import worker from '../src/index';
 
-describe('Vitest with local R2', () => {
+describe('Vitest with local R2', { sequential: true, concurrent: false }, async () => {
 	it('Is connected to local R2', async () => {
 		expect(env.testFiles).toBeDefined();
 		const response = await env.testFiles.list();
@@ -20,6 +20,9 @@ describe('Vitest with local R2', () => {
 	 * > wrangler r2 object put testFiles/src/index.ts --file ./src/index.ts --local
 	 * but event when the file is correctly saved in the local state, I can't access it here
 	 **/
+
+	// Uncomment the following like to see that uploading a file here works
+	// await env.testFiles.put('src/index.ts', './src/index.ts');
 
 	it('It has files outside worker', async () => {
 		const result = await env.testFiles.list();
